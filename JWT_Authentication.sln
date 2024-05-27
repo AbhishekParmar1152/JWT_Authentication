@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30021.99
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JWT_Authentication", "JWT_Authentication\JWT_Authentication.csproj", "{47C64F80-D7A1-46AE-9E9D-6CC24963A497}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JWT_API_CALL", "JWT_API_CALL\JWT_API_CALL.csproj", "{85E4A634-2A09-4CCA-AF3E-DB88DACCDEE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47C64F80-D7A1-46AE-9E9D-6CC24963A497}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47C64F80-D7A1-46AE-9E9D-6CC24963A497}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47C64F80-D7A1-46AE-9E9D-6CC24963A497}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47C64F80-D7A1-46AE-9E9D-6CC24963A497}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85E4A634-2A09-4CCA-AF3E-DB88DACCDEE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85E4A634-2A09-4CCA-AF3E-DB88DACCDEE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85E4A634-2A09-4CCA-AF3E-DB88DACCDEE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85E4A634-2A09-4CCA-AF3E-DB88DACCDEE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB133F4C-5975-49C4-9F64-244A28E21E54}
+	EndGlobalSection
+EndGlobal

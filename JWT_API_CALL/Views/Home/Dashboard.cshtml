@@ -1,0 +1,94 @@
+﻿@model JWT_Authentication.Models.UserRegistrationModel
+
+@*<html>
+<head>
+</head>
+<body>
+
+    <form>
+        <div class="container">
+            <h1>Account</h1>
+
+            @Html.LabelFor(m => m.Username)<br />
+            @Html.DisplayFor(m => m.Username)
+            <br />
+            <br />
+            @Html.LabelFor(m => m.Email)<br />
+            @Html.DisplayFor(m => m.Email)
+            <br />
+
+            @Html.ActionLink("Logout", "Logout", "Home")
+        </div>
+    </form>
+</body>
+</html>*@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+        .row.content {
+            height: 550px
+        }
+
+        /* Set gray background color and 100% height */
+        .sidenav {
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+  
+        <nav class="navbar navbar-inverse visible-xs">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">logo</a>
+                </div>
+                <div class="collapse navbar-collapse" id="mynavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Dashboard</a></li>
+                        <li><a href="~/Home/Registration">Register as User</a></li>
+                        <li><a href="~/Home/RegistrationAdmin">Register as Admin</a></li>
+                        <li><a href="~/Home/Logout">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-fluid">
+            <div class="row content">
+                <div class="col-sm-3 sidenav hidden-xs">
+                    <ul class="nav nav-pills nav-stacked">
+                        <li class="active"><a href="#section1">Dashboard</a></li>
+                        <li><a href="~/Home/Registration">Register as User</a></li>
+                        <li><a href="~/Home/RegistrationAdmin">Register as Admin</a></li>
+                        <li><a href="~/Home/Logout">Logout</a></li>
+                    </ul><br>
+                </div>
+                <br>
+
+                <div class="col-sm-9">
+                    <div class="well">
+                        <p>USERNAME : @Html.DisplayFor(m => m.Username)</p>
+                        <p>EMAIL : @Html.DisplayFor(m => m.Email)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+   
+</body>
+</html>
+

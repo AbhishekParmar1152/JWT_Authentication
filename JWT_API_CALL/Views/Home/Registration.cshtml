@@ -1,0 +1,110 @@
+﻿@model JWT_Authentication.Models.UserRegistrationModel
+
+@*<form method="post" action="~/Home/Registration">
+    <div class="container">
+        <h1>Register</h1>
+        <p>Please fill in this form to create an account.</p>
+
+        @Html.LabelFor(m => m.Username)<br />
+        @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "---UserName---", required = "required" })
+        <br />
+        @Html.LabelFor(m => m.Email)<br />
+        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "---Email---", required = "required" })
+        <br />
+        @Html.LabelFor(m => m.Password)<br />
+        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", placeholder = "---Password---", required = "required" })
+        <br />
+
+        <input type="submit" value="SUBMIT" />
+    </div>
+</form>*@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+    .cancelbtn {
+        color: white;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+        background-color: #f44336;
+    }
+
+    .registerbtn {
+        background-color: #04AA6D;
+        color: white;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    .heading {
+        background-color: lightblue;
+        color: gray;
+        text-align: center;
+        padding: 10px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    fieldset {
+        display: block;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-top: 0.35em;
+        padding-bottom: 0.625em;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        border: 2px groove;
+    }
+
+    legend {
+        background-color: aliceblue;
+        color: black;
+        padding: 5px 10px;
+        text-align: center;
+    }
+</style>
+
+<div class="container">
+    <fieldset class="fieldset">
+        <legend>REGISTER AS USER</legend>
+        <form asp-action="Registration" asp-controller="Home" method="post">
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email, new { placeholder = "Email", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="registerbtn">Sign Up</button>
+                <button type="reset" class="cancelbtn" onclick="history.back()">Cancel</button>
+            </div>
+
+        </form>
+    </fieldset>
+</div>
+
+
+

@@ -1,0 +1,134 @@
+﻿@model List<JWT_Authentication.Models.StudentModel>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .form-body {
+            padding: 10px 40px 100px 40px;
+            /*color: #666;*/
+            color: black;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: ghostwhite;
+        }
+
+        .form-header h1 {
+            font-size: 30px;
+            text-align: center;
+            color: #666;
+            padding: 20px 0;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        .form-header {
+            background-color: #EFF0F1;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .form-footer {
+            background-color: #EFF0F1;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            padding: 10px 40px 10px 40px;
+            text-align: right;
+            border-top: 1px solid #cccccc;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 16px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .cancelbtn {
+            width: auto;
+            padding: 5px 10px;
+            background-color: red;
+        }
+
+        .btn {
+            background-color: lightgrey;
+            color: black;
+            border-radius: 15%;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="form-header">
+            <h1>Registration Details</h1>
+        </div>
+        <div class="form-body">
+            <table border="1" align="center" cellpadding="10" cellspacing="2">
+                <tr>
+                    <th style="background-color:lightblue;color:black">
+                        @Html.DisplayNameFor(x => x.First().name)
+                    </th>
+                    <th style="background-color: lightblue;color: black">
+                        @Html.DisplayNameFor(x => x.First().rollno)
+                    </th>
+                    <th style="background-color: lightblue;color: black">
+                        @Html.DisplayNameFor(x => x.First().standard)
+                    </th>
+                    <th style="background-color: lightblue;color: black">
+                        @Html.DisplayNameFor(x => x.First().gender)
+                    </th>
+                    <th style="background-color: lightblue;color: black">
+                        @Html.DisplayNameFor(x => x.First().address)
+                    </th>
+                    <th style="background-color: lightblue;color: black">
+                        @Html.DisplayNameFor(x => x.First().city)
+                    </th>
+                    <th style="background-color: lightblue;color: black">
+                        @Html.DisplayNameFor(x => x.First().phonenumber)
+                    </th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelitem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.rollno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.standard)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.gender)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.address)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.city)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelitem => item.phonenumber)
+                </td>
+            </tr>
+                }
+            </table>
+        </div>
+        <div class="form-footer">
+            <button type="reset" class="btn" onclick="history.back()">BACK</button>
+        </div>
+    </form>
+</body>
+</html>
+

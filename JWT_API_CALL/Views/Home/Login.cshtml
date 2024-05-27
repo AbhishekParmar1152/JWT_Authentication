@@ -1,0 +1,86 @@
+﻿@model JWT_Authentication.Models.UserLoginModel
+
+
+
+@*<style>
+
+    a {
+        color: dodgerblue;
+    }
+</style>
+
+
+<form method="post" action="~/Home/Login">
+    <div class="container">
+        <h1>Login</h1>
+
+        @Html.LabelFor(m => m.Username)<br />
+        @Html.TextBoxFor(m => m.Username, new { @class = "form-control", placeholder = "---UserName---", required = "required" })
+        <br />
+        <br />
+        @Html.LabelFor(m => m.Password)<br />
+        @Html.TextBoxFor(m => m.Password, new { @class = "form-control", placeholder = "---Password---", required = "required" })
+        <br />
+
+        <input type="submit" value="SUBMIT" />
+    </div>
+    <span class="psw"> Register As  <a href="~/Home/Registration">USER?</a></span>
+    <br />
+    <span class="psw"> Register As  <a href="~/Home/RegistrationAdmin">ADMIN?</a></span>
+</form>*@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<style>
+    fieldset {
+        display: block;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding-top: 0.35em;
+        padding-bottom: 0.625em;
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+        border: 2px groove;
+    }
+
+    legend {
+        background-color: aliceblue;
+        color: black;
+        padding: 5px 10px;
+        text-align: center;
+    }
+
+    a {
+        color: dodgerblue;
+    }
+</style>
+
+<div class="container">
+
+    <fieldset class="fieldset">
+        <legend>Login</legend>
+        <form asp-action="Login" asp-controller="Home" method="post">
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.Username)
+                @Html.TextBoxFor(m => m.Username, new { placeholder = "Username", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Password)
+                @Html.PasswordFor(m => m.Password, new { placeholder = "Password", @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-success">Login</button>
+                <br />
+                <span class="psw"> Register As  <a href="~/Home/Registration">USER?</a></span>
+                <br />
+                <span class="psw"> Register As  <a href="~/Home/RegistrationAdmin">ADMIN?</a></span>
+                <br />
+                <span class="psw"> Student <a href="~/Home/Details">Details?</a></span>
+            </div>
+
+        </form>
+    </fieldset>
+</div>
